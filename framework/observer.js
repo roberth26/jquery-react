@@ -1,5 +1,5 @@
 app.define([ 'framework/Component.js', 'framework/render.js' ], ( Component, render ) => (
-	stores => component => {
+    stores => component => {
         return class ObserverWrapper extends Component {
             constructor( props ) {
                 super( props );
