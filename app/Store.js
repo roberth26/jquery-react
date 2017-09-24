@@ -1,5 +1,5 @@
 app.define([], () => (
-	class Store {
+    class Store {
         constructor() {
             this.subscribers = [];
             this.state = {
