@@ -1,5 +1,5 @@
 app.define([ 'framework/Component.js' ], ( Component ) => (
-	( component, props ) => {
+    ( component, props ) => {
         if ( typeof component === 'string' ) {
             return $(`<${component} />`, props );
         } else if ( component.__proto__ === Component ) {
@@ -9,7 +9,7 @@ app.define([ 'framework/Component.js' ], ( Component ) => (
 
             return component.render();
         }
-        
+
         return component( props );
     }
 ));

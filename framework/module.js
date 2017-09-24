@@ -3,8 +3,6 @@ const app = {}; // namespace
 app.modules = new Map();
 
 app.define = ( deps, module ) => {
-    const moduleName = document.currentScript.getAttribute( 'src' );
-
     // enqueue new dependencies
     deps.forEach( dep => {
         if ( !app.modules.has( dep ) ) {
@@ -15,6 +13,7 @@ app.define = ( deps, module ) => {
         }
     });
 
+    const moduleName = document.currentScript.getAttribute( 'src' );
     const modulePromise = app.modules.get( moduleName ) || $.Deferred();
     if ( !app.modules.has( moduleName ) ) {
         app.modules.set( moduleName, modulePromise );
