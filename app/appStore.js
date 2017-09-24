@@ -1,0 +1,1 @@
+app.define([ 'app/Store.js' ], Store => new Store() );
